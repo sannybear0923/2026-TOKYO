@@ -1,0 +1,301 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>2026 東京旅遊手冊</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&family=Varela+Round&display=swap">
+<style>
+/* Layout: autumn picture-book handbook. Sticky top tabs, full-width bands split by thick rules, outlined cards with hard shadows, floating skin pill. Day colour marks flight / Disney / hike / free days. */
+:root {
+  --bg:#FDE8CF; --band:#FFF6EA; --b1:#FDE8CF; --b2:#FFF6EA; --head:#FFFFFF; --card:#FFFFFF; --ink:#4A2B22; --muted:#7A5C50;
+  --accent:#B83A1E; --pill:#F5B45A; --pill-on:#4A2B22; --pill-on-fg:#FFFFFF;
+  --sky:#F9DDB8; --green:#BFC97E; --coral:#E4663F; --sun:#F4B860; --paper:#FFFFFF; --soft:#FFEFD6;
+  --k-air:#F5C97A; --k-disney:#AFC3F0; --k-hike:#F0A07A; --k-free:#E6DCCB;
+  --bw:3px; --r:22px; --sh:4px; --grid:transparent;
+  --font:"Noto Sans TC",system-ui,-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+  --disp:"Varela Round","Noto Sans TC",system-ui,sans-serif; --head-font:"Noto Sans TC",system-ui,sans-serif;
+  color-scheme:light;
+}
+:root[data-skin="storybook"] {
+  --bg:#FFF1D0; --band:#FFFBF0; --b1:#FFF1D0; --b2:#FFFBF0; --ink:#3D3838; --muted:#6E6660; --accent:#A63D2A; --pill:#F7D27C; --pill-on:#3D3838; --soft:#FFF4D9;
+  --sky:#A9D3E6; --green:#B9DBA4; --coral:#F2A598; --sun:#F7D47C;
+  --k-air:#F7D47C; --k-disney:#A9D3E6; --k-hike:#F2A598; --k-free:#E9E2D0;
+}
+:root[data-skin="journal"] {
+  --bg:#F4EFE4; --band:#F4EFE4; --b1:transparent; --b2:transparent; --head:#FBF8F0; --card:#FFFEF8; --ink:#2F3B52; --muted:#66708A;
+  --accent:#B4442A; --pill:#F5D9A6; --pill-on:#2F3B52; --soft:#F6EFD9;
+  --sky:#BCD3E8; --green:#C9DDB0; --coral:#EBB5A6; --sun:#F2D58E;
+  --k-air:#F2D58E; --k-disney:#BCD3E8; --k-hike:#EBB5A6; --k-free:#E2DCCB; --bw:2px; --r:6px; --sh:2px; --grid:#DDD6C4;
+}
+:root[data-skin="magazine"] {
+  --bg:#FFFFFF; --band:#F3F3F0; --b1:#FFFFFF; --b2:#F3F3F0; --head:#FFFFFF; --card:#FFFFFF; --ink:#111111; --muted:#5A5A5A;
+  --accent:#D6001C; --pill:#E8E8E4; --pill-on:#111111; --soft:#F3F3F0;
+  --sky:#E9E1D3; --green:#DCE8CF; --coral:#F4C9C3; --sun:#F6E3A1;
+  --k-air:#F6E3A1; --k-disney:#CFE3F2; --k-hike:#F4C9C3; --k-free:#E6E6E2; --bw:2px; --r:0px; --sh:0px;
+  --disp:"Noto Serif TC",serif; --head-font:"Noto Serif TC",serif;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:auto; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:var(--font); font-size:15px; line-height:1.65; padding-block:0 100px;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px); background-size:100% 28px; }
+body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:30; background:var(--head); }
+a { color:var(--accent); }
+.col { max-width:560px; margin:0 auto; padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); }
+.top { position:sticky; top:env(safe-area-inset-top,0px); z-index:20; background:var(--head); border-bottom:var(--bw) solid var(--ink); }
+.top .col { display:flex; align-items:center; gap:12px; height:52px; }
+.brand { font-weight:900; font-size:14px; flex:none; font-family:var(--head-font); }
+.tabs { display:flex; gap:2px; margin-left:auto; overflow-x:auto; scrollbar-width:none; min-width:0; }
+.tabs a { flex:none; text-decoration:none; color:var(--ink); font-weight:700; font-size:14px; padding:5px 12px; border-radius:999px; }
+:root[data-skin="magazine"] .tabs a, :root[data-skin="journal"] .tabs a { border-radius:var(--r); }
+.tabs a.on { background:var(--pill); }
+section.band { border-bottom:var(--bw) solid var(--ink); padding-block:28px 34px; scroll-margin-top:calc(env(safe-area-inset-top,0px) + 56px); }
+.b1 { background:var(--b1); } .b2 { background:var(--b2); }
+.card { background:var(--card); border:var(--bw) solid var(--ink); border-radius:var(--r); box-shadow:var(--sh) var(--sh) 0 var(--ink); min-width:0; }
+.hero-art { display:block; width:100%; height:auto; border:var(--bw) solid var(--ink); border-radius:var(--r); background:var(--paper); }
+.hero-art * { vector-effect:none; }
+.eyebrow { font-family:var(--disp); font-size:12px; font-weight:700; letter-spacing:.1em; color:var(--muted); margin-top:18px; }
+h1 { font-family:var(--head-font); font-size:clamp(30px,8vw,40px); line-height:1.2; margin:4px 0 6px; font-weight:900; text-wrap:balance; }
+.dates { color:var(--muted); font-size:14px; margin:0; }
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin:18px 0 20px; text-align:center; }
+.stats b { display:block; font-family:var(--disp); font-size:30px; line-height:1.15; color:var(--accent); }
+.stats span { font-size:12px; color:var(--muted); }
+.now { padding:18px 20px; }
+.now .lab2 { font-size:13px; color:var(--muted); }
+.now .big { display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; }
+.now .big b { font-family:var(--disp); font-size:46px; line-height:1.1; color:var(--accent); }
+.now .big i { font-style:normal; color:var(--muted); font-size:14px; }
+.now p { margin:6px 0 0; }
+.pv { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:14px; font-size:12px; color:var(--muted); }
+.pv input { font:inherit; font-size:13px; color:var(--ink); background:var(--paper); border:2px solid var(--ink); border-radius:8px; padding:2px 6px; }
+.pv button, .copy { font:inherit; font-size:12px; font-weight:700; color:var(--ink); background:var(--paper); border:2px solid var(--ink); border-radius:999px; padding:2px 10px; cursor:pointer; }
+:root[data-skin="magazine"] .pv button, :root[data-skin="magazine"] .copy, :root[data-skin="journal"] .copy { border-radius:var(--r); }
+h2 { font-family:var(--head-font); font-size:22px; margin:0 0 14px; font-weight:900; }
+.grid { display:grid; gap:14px; }
+.info { padding:14px 16px; }
+.info h4 { margin:0 0 2px; font-size:16px; }
+.info p { margin:0; font-size:14px; color:var(--muted); }
+.info a { font-weight:700; font-size:14px; }
+table.bagt { width:100%; border-collapse:collapse; font-size:14px; margin-top:6px; }
+.bagt th, .bagt td { text-align:left; padding:5px 6px 5px 0; border-bottom:1px dashed var(--ink); }
+.bagt th { font-size:12px; color:var(--muted); font-weight:500; }
+.bagt tr:last-child td { border-bottom:0; }
+.scroll { overflow-x:auto; }
+.ck { display:flex; align-items:center; gap:10px; padding:12px 14px; cursor:pointer; }
+.ck input { width:20px; height:20px; accent-color:var(--accent); flex:none; }
+.ck input:checked + span { text-decoration:line-through; color:var(--muted); }
+h5 { font-size:13px; color:var(--muted); letter-spacing:.06em; margin:18px 0 8px; font-weight:700; }
+h5:first-of-type { margin-top:0; }
+.passes { display:grid; gap:16px; }
+.pass { padding:14px 16px; }
+.ptop { display:flex; gap:8px; align-items:baseline; flex-wrap:wrap; }
+.fn { font-family:var(--disp); font-weight:700; font-size:17px; } .al, .pd { font-size:12px; color:var(--muted); } .pd { margin-left:auto; }
+.route { display:flex; align-items:center; gap:10px; margin:10px 0; }
+.route > div:not(.arrow) { display:flex; flex-direction:column; line-height:1.25; }
+.route b { font-family:var(--disp); font-size:30px; } .route span { font-size:12px; color:var(--muted); } .route em { font-style:normal; font-weight:700; font-size:14px; }
+.route .r { text-align:right; }
+.arrow { flex:1; border-top:3px dashed var(--ink); position:relative; min-width:20px; }
+.arrow::after { content:""; position:absolute; right:-2px; top:-8px; border:6px solid transparent; border-left:9px solid var(--ink); }
+.bag { font-size:13px; color:var(--muted); border-top:2px dashed var(--ink); padding-top:8px; }
+.days { display:grid; gap:18px; }
+.daytabs { display:flex; gap:10px; overflow-x:auto; scrollbar-width:none; padding:8px 8px 18px; margin:-8px -8px 0; }
+.dtab { flex:0 0 auto; min-width:84px; font:inherit; color:var(--ink); background:var(--card); border:var(--bw) solid var(--ink); border-radius:calc(var(--r) * .75); padding:6px 12px; display:flex; flex-direction:column; align-items:center; line-height:1.35; cursor:pointer; box-shadow:2px 2px 0 var(--ink); }
+:root[data-skin="magazine"] .dtab { box-shadow:none; }
+.dtab b { font-family:var(--disp); font-size:16px; } .dtab span { font-size:12px; color:var(--muted); }
+.dtab.on { background:var(--pill); }
+.dtab.today { outline:3px dashed var(--accent); outline-offset:4px; }
+.day { padding:16px; scroll-margin-top:calc(env(safe-area-inset-top,0px) + 66px); }
+.day.is-today { outline:4px solid var(--accent); outline-offset:3px; }
+.day > header { display:flex; gap:14px; align-items:center; padding-bottom:12px; border-bottom:2px dashed var(--ink); }
+.dt { flex:none; background:var(--c); border:var(--bw) solid var(--ink); border-radius:calc(var(--r) * .6); padding:4px 10px; text-align:center; line-height:1.2; }
+.k-air { --c:var(--k-air); } .k-disney { --c:var(--k-disney); } .k-hike { --c:var(--k-hike); } .k-free { --c:var(--k-free); }
+.dt b { display:block; font-family:var(--disp); font-size:20px; } .dt span { font-size:12px; font-weight:700; }
+.dh { min-width:0; } .city { font-size:12px; font-weight:700; color:var(--muted); letter-spacing:.06em; }
+.today-badge { font-style:normal; margin-left:8px; background:var(--accent); color:var(--paper); border-radius:999px; padding:0 8px; font-size:11px; }
+h3 { margin:0; font-size:18px; line-height:1.35; text-wrap:balance; font-family:var(--head-font); }
+.tl { list-style:none; margin:0; padding:6px 0 0; }
+.it { display:grid; grid-template-columns:58px minmax(0,1fr); gap:10px; padding:9px 0; border-bottom:2px dotted color-mix(in srgb, var(--ink) 35%, transparent); }
+.it:last-child { border-bottom:0; }
+.lab { font-family:var(--disp); font-size:14px; font-weight:700; color:var(--accent); padding-top:1px; }
+.lab.dot { position:relative; } .lab.dot::before { content:""; position:absolute; left:6px; top:11px; width:8px; height:8px; border-radius:50%; background:var(--ink); }
+.ib { display:flex; flex-direction:column; min-width:0; overflow-wrap:anywhere; }
+.t { font-weight:700; } .note { font-size:13px; color:var(--muted); }
+.tag { display:inline-block; font-size:11px; font-weight:700; padding:0 7px; margin-right:6px; border:2px solid var(--ink); border-radius:999px; background:var(--paper); line-height:1.5; vertical-align:1px; }
+:root[data-skin="magazine"] .tag, :root[data-skin="journal"] .tag { border-radius:var(--r); }
+.flight { background:var(--sun); border:2px solid var(--ink); border-radius:calc(var(--r) * .5); margin:6px 0; padding:9px 10px; }
+.flight .lab, .warn .lab { color:var(--ink); }
+.warn { background:var(--soft); border:2px dashed var(--ink); border-radius:calc(var(--r) * .5); margin:6px 0; padding:9px 10px; }
+.map, .ext { font-size:12px; font-weight:700; margin-left:6px; white-space:nowrap; }
+.ext { display:inline-block; margin:8px 0 0; }
+.hotel { display:flex; gap:10px; margin-top:12px; padding:12px; border:2px solid var(--ink); border-radius:calc(var(--r) * .6); background:var(--c); }
+.hotel .tag { align-self:flex-start; margin-top:2px; }
+.hbody { display:flex; flex-direction:column; min-width:0; } .addr { font-size:13px; overflow-wrap:anywhere; }
+.hact { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; align-items:center; font-size:13px; } .tel { font-size:13px; }
+.hotels { display:grid; gap:16px; }
+.hcard { padding:16px; }
+.pillbar { position:fixed; z-index:25; left:50%; transform:translateX(-50%); bottom:calc(12px + env(safe-area-inset-bottom,0px)); max-width:calc(100% - 24px - env(safe-area-inset-left,0px) - env(safe-area-inset-right,0px));
+  display:flex; gap:2px; padding:5px; background:var(--head); border:var(--bw) solid var(--ink); border-radius:999px; box-shadow:var(--sh) var(--sh) 0 var(--ink); overflow-x:auto; scrollbar-width:none; }
+:root[data-skin="magazine"] .pillbar, :root[data-skin="journal"] .pillbar { border-radius:var(--r); }
+.sk { flex:none; font:inherit; font-size:13px; font-weight:700; color:var(--ink); background:transparent; border:0; border-radius:999px; padding:6px 12px; cursor:pointer; display:flex; gap:6px; align-items:center; }
+:root[data-skin="magazine"] .sk, :root[data-skin="journal"] .sk { border-radius:var(--r); }
+.sk.on { background:var(--pill-on); color:var(--pill-on-fg); }
+.foot { font-size:12px; color:var(--muted); margin:20px 0 0; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+@media (max-width:380px) { .brand { display:none; } .stats b { font-size:26px; } }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior:smooth; } }
+
+</style>
+
+<header class="top"><div class="col"><span class="brand">東京 5 日</span><nav class="tabs" id="tabs" aria-label="章節"><a href="#home" class="on">首頁</a><a href="#ready">準備</a><a href="#flights">航班</a><a href="#days">行程</a><a href="#todo">清單</a><a href="#hotels">住宿</a></nav></div></header>
+
+<section class="band b1" id="home"><div class="col">
+<svg class="hero-art" viewBox="0 0 528 290" role="img" aria-label="紅葉的山、纜車與楓葉的插圖">
+<g stroke="var(--ink)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<rect x="0" y="0" width="528" height="290" fill="var(--paper)" stroke="none"/>
+<circle cx="430" cy="62" r="30" fill="var(--sun)"/>
+<path d="M60 76a14 14 0 0 1 8-26a20 20 0 0 1 36-6a16 16 0 0 1 26 12a12 12 0 0 1-2 20z" fill="var(--paper)"/>
+<path d="M-4 205L80 140L160 178L262 96L352 168L440 124L532 182V240H-4Z" fill="var(--sky)"/>
+<path d="M-4 236C80 196 200 204 300 228C380 202 470 198 532 222V294H-4Z" fill="var(--green)"/>
+<path d="M90 264L350 172" fill="none"/>
+<g transform="translate(250 206) rotate(-19.5)"><rect x="-24" y="-12" width="48" height="26" rx="6" fill="var(--coral)"/><rect x="-16" y="-5" width="11" height="10" fill="var(--paper)" stroke-width="2"/><rect x="5" y="-5" width="11" height="10" fill="var(--paper)" stroke-width="2"/></g>
+<rect x="407" y="232" width="6" height="24" fill="var(--ink)"/><circle cx="410" cy="228" r="26" fill="var(--coral)"/><circle cx="402" cy="224" r="16" fill="var(--sun)"/><rect x="463" y="240" width="6" height="19.200000000000003" fill="var(--ink)"/><circle cx="466" cy="236" r="20.8" fill="var(--coral)"/><circle cx="459.6" cy="232" r="12.8" fill="var(--sun)"/><rect x="101" y="246" width="6" height="21.6" fill="var(--ink)"/><circle cx="104" cy="242" r="23.400000000000002" fill="var(--coral)"/><circle cx="96.8" cy="238" r="14.4" fill="var(--sun)"/>
+<path transform="translate(120 70) rotate(20) scale(1.2)" fill="var(--coral)" d="M0 -16L4 -8L12 -11L9 -2L16 0L7 6L9 14L0 9L-9 14L-7 6L-16 0L-9 -2L-12 -11L-4 -8Z"/><path transform="translate(236 46) rotate(-15) scale(1)" fill="var(--sun)" d="M0 -16L4 -8L12 -11L9 -2L16 0L7 6L9 14L0 9L-9 14L-7 6L-16 0L-9 -2L-12 -11L-4 -8Z"/><path transform="translate(338 104) rotate(35) scale(1.1)" fill="var(--coral)" d="M0 -16L4 -8L12 -11L9 -2L16 0L7 6L9 14L0 9L-9 14L-7 6L-16 0L-9 -2L-12 -11L-4 -8Z"/>
+</g></svg>
+<div class="eyebrow">TOKYO • AUTUMN 2026</div>
+<h1>2026 東京旅遊手冊</h1>
+<p class="dates">2026 / 12 / 03（四）– 12 / 07（一）・5 天 4 夜</p>
+<div class="stats"><div><b>5</b><span>天</span></div><div><b>4</b><span>晚住宿</span></div><div><b>2</b><span>段航班</span></div><div><b>2</b><span>人同行</span></div></div>
+<div class="now card" id="now"><div class="lab2" id="nowLab">旅程</div><div class="big"><b id="nowBig">12/3</b><i id="nowSmall"></i></div><p id="nowTxt">12/3 從桃園出發，12/7 返抵桃園。</p>
+<div class="pv"><label for="pv">預覽某一天</label><input type="date" id="pv" min="2026-11-20" max="2026-12-10" value=""><button type="button" id="pvx">回到今天</button></div></div>
+</div></section>
+
+<section class="band b2" id="ready"><div class="col">
+<h2>🧳 出發前準備</h2>
+<div class="grid">
+<div class="info card"><h4>入境 QR</h4><p>12/3 抵達成田前先填好。</p></div>
+<div class="info card"><h4>退稅</h4><p>12/7 要退稅，提早到機場。</p></div>
+<div class="info card"><h4>行李</h4><div class="scroll"><table class="bagt"><tr><th>航班</th><th>托運</th></tr><tr><td>星宇 JX802（去程）</td><td>23 公斤</td></tr><tr><td>星宇 JX805（回程）</td><td>23 公斤</td></tr></table></div></div>
+<div class="info card"><h4>高尾山楓葉</h4><p>預測 11/15 起進入見頃，例年約 11 月中旬到 12 月上旬。12/5 已接近尾聲，出發前再看最新狀況。</p><a href="https://tenki.jp/kouyou/3/16/34655.html" target="_blank" rel="noopener">tenki.jp 高尾山紅葉</a></div>
+<div class="info card"><h4>迪士尼 12/4</h4><p>樂園 9:00–18:30，海洋 9:00–21:00。營業時間可能變更。</p><a href="https://www.tokyodisneyresort.jp/tc/tdl/monthly/calendar/202612/" target="_blank" rel="noopener">官方營業日曆</a></div>
+</div></div></section>
+
+<section class="band b1" id="flights"><div class="col">
+<h2>✈️ 航班</h2>
+<div class="passes"><div class="pass card"><div class="ptop"><span class="fn">JX802</span><span class="al">星宇航空</span><span class="pd">12/3 週四</span></div>
+<div class="route"><div><b>TPE</b><span>T1</span><em>10:10</em></div><div class="arrow" aria-hidden="true"></div><div class="r"><b>NRT</b><span>T2</span><em>14:20</em></div></div>
+<div class="bag">托運 23 公斤・要填入境 QR</div></div><div class="pass card"><div class="ptop"><span class="fn">JX805</span><span class="al">星宇航空</span><span class="pd">12/7 週一</span></div>
+<div class="route"><div><b>NRT</b><span>T2</span><em>20:10</em></div><div class="arrow" aria-hidden="true"></div><div class="r"><b>TPE</b><span>T1</span><em>23:20</em></div></div>
+<div class="bag">托運 23 公斤・提早到機場退稅</div></div></div>
+</div></section>
+
+<section class="band b2" id="days"><div class="col">
+<h2>🗺️ 每日行程</h2>
+<div class="daytabs" id="daytabs" role="tablist" aria-label="選擇日期"><button type="button" class="dtab on" data-i="0" role="tab"><b>Day 1</b><span>抵達</span></button><button type="button" class="dtab" data-i="1" role="tab"><b>Day 2</b><span>迪士尼</span></button><button type="button" class="dtab" data-i="2" role="tab"><b>Day 3</b><span>高尾山</span></button><button type="button" class="dtab" data-i="3" role="tab"><b>Day 4</b><span>自由日</span></button><button type="button" class="dtab" data-i="4" role="tab"><b>Day 5</b><span>返程</span></button></div>
+<div class="days"><article class="day card k-air" id="d1203" data-i="0"><header><div class="dt"><b>12/3</b><span>週四</span></div><div class="dh"><span class="city">抵達東京<em class="today-badge" hidden>今天</em></span><h3>桃園 → 成田，入住秋葉原</h3></div></header>
+<ul class="tl"><li class="it flight"><span class="lab">10:10</span><div class="ib"><span class="t"><span class="tag">航班</span>JX802 桃園 T1 → 成田 T2</span><span class="note">14:20 抵達。托運 23 公斤，要先填好入境 QR</span></div></li><li class="it"><span class="lab">14:20</span><div class="ib"><span class="t">抵達成田機場 T2 <a class="map" href="https://www.google.com/maps/search/?api=1&query=Narita%20Airport%20Terminal%202" target="_blank" rel="noopener">地圖</a></span><span class="note">入境、領行李</span></div></li><li class="it"><span class="lab">晚上</span><div class="ib"><span class="t">自由安排</span><span class="note">尚未排定</span></div></li></ul><div class="hotel"><span class="tag">住宿</span><div class="hbody"><strong>JR East Hotel Mets Premier Akihabara</strong><span class="addr">1-17-4 Sotokanda, Chiyoda-ku, Tokyo 101-0021</span>
+<div class="hact"><a href="https://www.google.com/maps/search/?api=1&query=JR%20East%20Hotel%20Mets%20Premier%20Akihabara%2C%201-17-4%20Sotokanda%2C%20Chiyoda-ku%2C%20Tokyo" target="_blank" rel="noopener">地圖</a><button type="button" class="copy" data-copy="1-17-4 Sotokanda, Chiyoda-ku, Tokyo 101-0021">複製地址</button><button type="button" class="copy" data-copy="+81 3-5294-1011">複製電話</button><span class="tel">+81 3-5294-1011</span></div></div></div></article>
+<article class="day card k-disney" id="d1204" data-i="1"><header><div class="dt"><b>12/4</b><span>週五</span></div><div class="dh"><span class="city">迪士尼<em class="today-badge" hidden>今天</em></span><h3>東京迪士尼</h3></div></header>
+<ul class="tl"><li class="it"><span class="lab">全天</span><div class="ib"><span class="t">東京迪士尼 <a class="map" href="https://www.google.com/maps/search/?api=1&query=Tokyo%20Disney%20Resort" target="_blank" rel="noopener">地圖</a></span><span class="note">園區尚未決定。樂園 9:00–18:30，海洋 9:00–21:00。營業時間可能變更，出發前再確認</span></div></li><li class="it"><span class="lab dot"></span><div class="ib"><span class="t"><span class="tag">活動</span>迪士尼聖誕節</span><span class="note">11/11 – 12/25 舉辦中</span></div></li><li class="it"><span class="lab dot"></span><div class="ib"><span class="t"><span class="tag">活動</span>海洋 25 週年「閃耀歡騰」 <a class="map" href="https://www.google.com/maps/search/?api=1&query=Tokyo%20DisneySea" target="_blank" rel="noopener">地圖</a></span><span class="note">舉辦到 2027/3/31</span></div></li></ul><a class="ext" href="https://www.tokyodisneyresort.jp/tc/tdl/monthly/calendar/202612/" target="_blank" rel="noopener">官方營業日曆</a><div class="hotel"><span class="tag">住宿</span><div class="hbody"><strong>JR East Hotel Mets Premier Akihabara</strong><span class="addr">1-17-4 Sotokanda, Chiyoda-ku, Tokyo 101-0021</span>
+<div class="hact"><a href="https://www.google.com/maps/search/?api=1&query=JR%20East%20Hotel%20Mets%20Premier%20Akihabara%2C%201-17-4%20Sotokanda%2C%20Chiyoda-ku%2C%20Tokyo" target="_blank" rel="noopener">地圖</a><button type="button" class="copy" data-copy="1-17-4 Sotokanda, Chiyoda-ku, Tokyo 101-0021">複製地址</button><button type="button" class="copy" data-copy="+81 3-5294-1011">複製電話</button><span class="tel">+81 3-5294-1011</span></div></div></div></article>
+<article class="day card k-hike" id="d1205" data-i="2"><header><div class="dt"><b>12/5</b><span>週六</span></div><div class="dh"><span class="city">賞楓<em class="today-badge" hidden>今天</em></span><h3>高尾山</h3></div></header>
+<ul class="tl"><li class="it"><span class="lab">上午</span><div class="ib"><span class="t">高尾山 <a class="map" href="https://www.google.com/maps/search/?api=1&query=Mt.%20Takao" target="_blank" rel="noopener">地圖</a></span><span class="note">預測 11/15 起進入見頃，例年到 12 月上旬。12/5 已近尾聲，顏色由山頂慢慢轉到山腳，出發前看最新狀況</span></div></li><li class="it"><span class="lab dot"></span><div class="ib"><span class="t"><span class="tag">活動</span>高尾山紅葉祭</span><span class="note">10/24 – 12/13</span></div></li><li class="it"><span class="lab">傍晚</span><div class="ib"><span class="t"><span class="tag">活動</span>纜車沿線夜間點燈 <a class="map" href="https://www.google.com/maps/search/?api=1&query=Takaosan%20Cable%20Car%20Kiyotaki%20Station" target="_blank" rel="noopener">地圖</a></span><span class="note">日落到 20:30，週五、六、日與假日，到 12/6 為止</span></div></li><li class="it"><span class="lab dot"></span><div class="ib"><span class="t">假日人潮多</span><span class="note">建議早點出發，避開尖峰時段</span></div></li></ul><a class="ext" href="https://tenki.jp/kouyou/3/16/34655.html" target="_blank" rel="noopener">高尾山紅葉狀況（tenki.jp）</a><div class="hotel"><span class="tag">住宿</span><div class="hbody"><strong>JR East Hotel Mets Premier Akihabara</strong><span class="addr">1-17-4 Sotokanda, Chiyoda-ku, Tokyo 101-0021</span>
+<div class="hact"><a href="https://www.google.com/maps/search/?api=1&query=JR%20East%20Hotel%20Mets%20Premier%20Akihabara%2C%201-17-4%20Sotokanda%2C%20Chiyoda-ku%2C%20Tokyo" target="_blank" rel="noopener">地圖</a><button type="button" class="copy" data-copy="1-17-4 Sotokanda, Chiyoda-ku, Tokyo 101-0021">複製地址</button><button type="button" class="copy" data-copy="+81 3-5294-1011">複製電話</button><span class="tel">+81 3-5294-1011</span></div></div></div></article>
+<article class="day card k-free" id="d1206" data-i="3"><header><div class="dt"><b>12/6</b><span>週日</span></div><div class="dh"><span class="city">自由日<em class="today-badge" hidden>今天</em></span><h3>尚未安排</h3></div></header>
+<ul class="tl"><li class="it"><span class="lab dot"></span><div class="ib"><span class="t">待排</span></div></li></ul><div class="hotel"><span class="tag">住宿</span><div class="hbody"><strong>JR East Hotel Mets Premier Akihabara</strong><span class="addr">1-17-4 Sotokanda, Chiyoda-ku, Tokyo 101-0021</span>
+<div class="hact"><a href="https://www.google.com/maps/search/?api=1&query=JR%20East%20Hotel%20Mets%20Premier%20Akihabara%2C%201-17-4%20Sotokanda%2C%20Chiyoda-ku%2C%20Tokyo" target="_blank" rel="noopener">地圖</a><button type="button" class="copy" data-copy="1-17-4 Sotokanda, Chiyoda-ku, Tokyo 101-0021">複製地址</button><button type="button" class="copy" data-copy="+81 3-5294-1011">複製電話</button><span class="tel">+81 3-5294-1011</span></div></div></div></article>
+<article class="day card k-air" id="d1207" data-i="4"><header><div class="dt"><b>12/7</b><span>週一</span></div><div class="dh"><span class="city">返程<em class="today-badge" hidden>今天</em></span><h3>東京 → 桃園</h3></div></header>
+<ul class="tl"><li class="it"><span class="lab">上午</span><div class="ib"><span class="t">退房</span></div></li><li class="it"><span class="lab dot"></span><div class="ib"><span class="t">提早到機場退稅 <a class="map" href="https://www.google.com/maps/search/?api=1&query=Narita%20Airport%20Terminal%202" target="_blank" rel="noopener">地圖</a></span></div></li><li class="it flight"><span class="lab">20:10</span><div class="ib"><span class="t"><span class="tag">航班</span>JX805 成田 T2 → 桃園 T1</span><span class="note">23:20 抵達。托運 23 公斤</span></div></li></ul></article>
+</div>
+</div></section>
+
+<section class="band b1" id="todo"><div class="col">
+<h2>✅ 清單</h2>
+<h5>出發前</h5>
+<div class="grid"><label class="ck"><input type="checkbox" id="ck0"><span>填好入境 QR</span></label><label class="ck"><input type="checkbox" id="ck1"><span>托運行李 23 公斤內（來回）</span></label><label class="ck"><input type="checkbox" id="ck2"><span>12/7 提早到機場退稅</span></label></div>
+<h5>待決定</h5>
+<div class="grid"><label class="ck"><input type="checkbox" id="ck10"><span>12/4 決定去迪士尼樂園或海洋</span></label><label class="ck"><input type="checkbox" id="ck11"><span>12/6 自由日要去哪裡</span></label><label class="ck"><input type="checkbox" id="ck12"><span>12/5 出發前再看高尾山楓葉狀況</span></label></div>
+</div></section>
+
+<section class="band b2" id="hotels"><div class="col">
+<h2>🏨 住宿</h2>
+<div class="hotels">
+<div class="hcard card k-free"><div class="city">秋葉原・12/3 – 12/7・4 晚</div><h3>JR East Hotel Mets Premier Akihabara</h3><div class="hotel"><span class="tag">住宿</span><div class="hbody"><strong>JR East Hotel Mets Premier Akihabara</strong><span class="addr">1-17-4 Sotokanda, Chiyoda-ku, Tokyo 101-0021</span>
+<div class="hact"><a href="https://www.google.com/maps/search/?api=1&query=JR%20East%20Hotel%20Mets%20Premier%20Akihabara%2C%201-17-4%20Sotokanda%2C%20Chiyoda-ku%2C%20Tokyo" target="_blank" rel="noopener">地圖</a><button type="button" class="copy" data-copy="1-17-4 Sotokanda, Chiyoda-ku, Tokyo 101-0021">複製地址</button><button type="button" class="copy" data-copy="+81 3-5294-1011">複製電話</button><span class="tel">+81 3-5294-1011</span></div></div></div></div>
+</div>
+<p class="foot">資料來源：你提供的航班與飯店資料；楓葉預測為 tenki.jp（11/13 更新），迪士尼營業時間為東京迪士尼度假區官方日曆，高尾山活動為 Jorudan 10/23 的整理。</p>
+</div></section>
+
+<div class="pillbar" id="skins" role="group" aria-label="換風格"><button type="button" class="sk on" data-skin="maple"><span aria-hidden="true">🍁</span>楓</button><button type="button" class="sk" data-skin="storybook"><span aria-hidden="true">🎨</span>繪本</button><button type="button" class="sk" data-skin="journal"><span aria-hidden="true">📒</span>手帳</button><button type="button" class="sk" data-skin="magazine"><span aria-hidden="true">📰</span>雜誌</button></div>
+
+<script>
+
+(function () {
+  var DAYS = [{"c": "抵達東京", "t": "桃園 → 成田，入住秋葉原", "id": "d1203"}, {"c": "迪士尼", "t": "東京迪士尼", "id": "d1204"}, {"c": "賞楓", "t": "高尾山", "id": "d1205"}, {"c": "自由日", "t": "尚未安排", "id": "d1206"}, {"c": "返程", "t": "東京 → 桃園", "id": "d1207"}];
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) {} return null; }
+  var root = document.documentElement;
+  function setSkin(s) {
+    if (s === 'maple') root.removeAttribute('data-skin'); else root.setAttribute('data-skin', s);
+    document.querySelectorAll('.sk').forEach(function (b) { b.classList.toggle('on', b.dataset.skin === s); });
+  }
+  var saved = store('tokyo26-skin'); if (saved) setSkin(saved);
+  document.querySelectorAll('.sk').forEach(function (b) { b.addEventListener('click', function () { setSkin(b.dataset.skin); store('tokyo26-skin', b.dataset.skin); }); });
+
+  document.querySelectorAll('.ck input').forEach(function (c) {
+    c.checked = store('tokyo26-' + c.id) === '1';
+    c.addEventListener('change', function () { store('tokyo26-' + c.id, c.checked ? '1' : '0'); });
+  });
+  function sel(b) {
+    var t = document.createElement('textarea'); t.value = b.dataset.copy; document.body.appendChild(t); t.select();
+    try { document.execCommand('copy'); b.textContent = '已複製'; } catch (e) {} document.body.removeChild(t);
+  }
+  document.querySelectorAll('.copy').forEach(function (b) {
+    var label = b.textContent;
+    b.addEventListener('click', function () {
+      var done = function () { b.textContent = '已複製'; setTimeout(function () { b.textContent = label; }, 1500); };
+      try { navigator.clipboard.writeText(b.dataset.copy).then(done, function () { sel(b); }); } catch (e) { sel(b); }
+    });
+  });
+
+  function showDay(i) {
+    document.querySelectorAll('.day').forEach(function (d) { d.hidden = +d.dataset.i !== i; });
+    var box = document.getElementById('daytabs');
+    document.querySelectorAll('.dtab').forEach(function (t) {
+      var on = +t.dataset.i === i; t.classList.toggle('on', on); t.setAttribute('aria-selected', on ? 'true' : 'false');
+      if (on) box.scrollLeft = t.offsetLeft - (box.clientWidth - t.offsetWidth) / 2;
+    });
+  }
+  document.querySelectorAll('.dtab').forEach(function (b) { b.addEventListener('click', function () { showDay(+b.dataset.i); }); });
+  var pv = document.getElementById('pv');
+  function today() {
+    if (pv.value) { var p = pv.value.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+    var n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate());
+  }
+  function renderNow() {
+    var diff = Math.round((today() - new Date(2026, 11, 3)) / 86400000);
+    var L = document.getElementById('nowLab'), B = document.getElementById('nowBig'), S = document.getElementById('nowSmall'), T = document.getElementById('nowTxt');
+    document.querySelectorAll('.day').forEach(function (d) { d.classList.remove('is-today'); d.querySelector('.today-badge').hidden = true; });
+    document.querySelectorAll('.dtab').forEach(function (t) { t.classList.remove('today'); });
+    if (diff < 0) { L.textContent = '距離出發'; B.textContent = (-diff) + ' 天'; S.textContent = ''; T.textContent = '12/3 早上從桃園出發，JX802 10:10 起飛。'; }
+    else if (diff < DAYS.length) {
+      var d = DAYS[diff]; L.textContent = '旅程進行中'; B.textContent = 'Day ' + (diff + 1); S.textContent = '/ ' + DAYS.length; T.textContent = d.c + '・' + d.title;
+      var el = document.getElementById(d.id); el.classList.add('is-today'); el.querySelector('.today-badge').hidden = false;
+      var tt = document.querySelector('.dtab[data-i="' + diff + '"]'); if (tt) { tt.classList.add('today'); showDay(diff); }
+    } else { L.textContent = '這趟旅程'; B.textContent = '已完成'; S.textContent = ''; T.textContent = '12/3 – 12/7，東京 5 天 4 夜。'; }
+  }
+  pv.addEventListener('input', renderNow);
+  document.getElementById('pvx').addEventListener('click', function () { pv.value = ''; renderNow(); });
+  showDay(0);
+  renderNow();
+
+  var links = Array.prototype.slice.call(document.querySelectorAll('#tabs a'));
+  var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  function onScroll() {
+    var y = window.scrollY + 120, cur = 0;
+    secs.forEach(function (s, i) { if (s.offsetTop <= y) cur = i; });
+    links.forEach(function (a, i) { a.classList.toggle('on', i === cur); });
+    if (links[cur]) links[cur].scrollIntoView({ block: 'nearest', inline: 'center' });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+})();
+
+</script>
+
+</body></html>
